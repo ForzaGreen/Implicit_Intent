@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Call Browser"
-        android:id="@+id/button1"
+        android:id="@+id/Call_Browser"
         android:onClick="callIntent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -19,9 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Call Someone"
-        android:id="@+id/button2"
+        android:id="@+id/Call_Someone"
         android:onClick="callIntent"
-        android:layout_below="@+id/button1"
+        android:layout_below="@+id/Call_Browser"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -29,8 +29,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dial"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
+        android:id="@+id/Dial"
+        android:onClick="callIntent"
+        android:layout_below="@+id/Call_Someone"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -38,8 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show Map"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button3"
+        android:id="@+id/Show_Map"
+        android:onClick="callIntent"
+        android:layout_below="@+id/Dial"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -47,8 +49,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search on Map"
-        android:id="@+id/button5"
-        android:layout_below="@+id/button4"
+        android:onClick="callIntent"
+        android:id="@+id/Search_on_Map"
+        android:layout_below="@+id/Show_Map"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -56,8 +59,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Take Picture"
-        android:id="@+id/button6"
-        android:layout_below="@+id/button5"
+        android:id="@+id/Take_Picture"
+        android:onClick="callIntent"
+        android:layout_below="@+id/Search_on_Map"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -65,8 +69,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show Contact"
-        android:id="@+id/button7"
-        android:layout_below="@+id/button6"
+        android:id="@+id/Show_Contact"
+        android:onClick="callIntent"
+        android:layout_below="@+id/Take_Picture"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -74,28 +79,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edit first Contact"
-        android:id="@+id/button8"
-        android:layout_below="@+id/button7"
+        android:id="@+id/Edit_first_Contact"
+        android:layout_below="@+id/Show_Contact"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="callIntent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to calendar"
+        android:id="@+id/Add_to_calendar"
+        android:layout_below="@+id/Edit_first_Contact"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="callIntent"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edit_url"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_toRightOf="@+id/button1"
+        android:layout_alignBottom="@+id/Call_Browser"
+        android:layout_toRightOf="@+id/Call_Browser"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toRightOf="@+id/button2"
+        android:id="@+id/phone_number"
+        android:layout_alignBottom="@+id/Call_Someone"
+        android:layout_toRightOf="@+id/Call_Someone"
         android:layout_alignRight="@+id/edit_url"
         android:layout_alignEnd="@+id/edit_url" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/map_place"
+        android:layout_alignBottom="@+id/Search_on_Map"
+        android:layout_toRightOf="@+id/Search_on_Map"
+        android:layout_alignRight="@+id/phone_number"
+        android:layout_alignEnd="@+id/phone_number" />
 
 
 </RelativeLayout>
